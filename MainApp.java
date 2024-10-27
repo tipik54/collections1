@@ -1,19 +1,15 @@
 package ru.kaznu.ruslan.collections;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Arrays;
+
+import static ru.kaznu.ruslan.collections.Employee.findMin;
+import static ru.kaznu.ruslan.collections.Employee.info;
+
 
 public class MainApp {
     public static void main(String[] args) {
-        //Реализуйте метод, принимающий в качестве аргументов числа min и max,
-        // и возвращающий ArrayList с набором последовательных значений в
-        // указанном диапазоне (min и max включительно, шаг - 1);
-        //Реализуйте метод, принимающий в качестве аргумента список целых чисел,
-        // суммирующий все элементы, значение которых больше 5, и возвращающий сумму;
-        //Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список,
-        // метод должен переписать каждую заполненную ячейку списка указанным числом;
-        //Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список,
-        // увеличивающий каждый элемент списка на указанное число;
+
         //Создайте класс Сотрудник с полями: имя, возраст;
         //Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий список их имен;
         //Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный возраст,
@@ -22,7 +18,16 @@ public class MainApp {
         // и проверяющий что средний возраст сотрудников превышает указанный аргумент;
         //Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий ссылку на самого молодого сотрудника.
 
-
-
+        ArrayList<Employee> arrayLists = new ArrayList<>(Arrays.asList(
+                new Employee("Alexey", 40),
+                new Employee("Ruslan", 20),
+                new Employee("Dias", 18),
+                new Employee("Ilya", 22),
+                new Employee("Beksultan", 21)
+        ));
+//        info(arrayLists);
+//        Employee.elderThan(arrayLists, 21);
+//        Employee.minAverageAge(arrayLists, 25);
+        findMin(arrayLists);
     }
 }
