@@ -2,6 +2,7 @@ package ru.kaznu.ruslan.collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -21,8 +22,14 @@ public class MainApp {
         //Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный средний возраст,
         // и проверяющий что средний возраст сотрудников превышает указанный аргумент;
         //Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий ссылку на самого молодого сотрудника.
+        arrayList(5,10);
+    }
 
-
-
+    public static void arrayList (int min, int max) {
+        List<Integer> arrayList = new ArrayList<>();
+        for (int i = min; i <= max; i++){
+            arrayList.add(i);
+        }
+        System.out.println(arrayList);
     }
 }
