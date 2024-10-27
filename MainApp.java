@@ -1,6 +1,7 @@
 package ru.kaznu.ruslan.collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,21 +16,50 @@ public class MainApp {
         // метод должен переписать каждую заполненную ячейку списка указанным числом;
         //Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список,
         // увеличивающий каждый элемент списка на указанное число;
-        //Создайте класс Сотрудник с полями: имя, возраст;
-        //Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий список их имен;
-        //Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный возраст,
-        // и возвращающий список сотрудников, возраст которых больше либо равен указанному аргументу;
-        //Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный средний возраст,
-        // и проверяющий что средний возраст сотрудников превышает указанный аргумент;
-        //Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий ссылку на самого молодого сотрудника.
-        arrayList(5,10);
+
+//        addFromMinToMax(5,10);
+//        listSum(1,2,3,4,5,6);
+//        List<Integer> myList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+//        sumListElementWithValue(1, (ArrayList<Integer>) myList);
+//        setListElementWithValue(4, (ArrayList<Integer>) myList);
+
     }
 
-    public static void arrayList (int min, int max) {
+    public static void sumListElementWithValue (int value, ArrayList<Integer> arrayList) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            arrayList.set(i, arrayList.get(i) + value);
+        }
+        System.out.println(arrayList);
+    }
+
+    public static void setListElementWithValue (int value, ArrayList<Integer> arrayList) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            arrayList.set(i, value);
+        }
+        System.out.println(arrayList);
+    }
+
+    public static void listSum (int... nums){
+        int sum = 0;
+        List<Integer> arrayList = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++){
+            arrayList.add(nums[i]);
+        }
+        for (int j = 0; j < arrayList.size(); j++){
+            arrayList.get(j);
+            if (arrayList.get(j) > 5){
+               sum += arrayList.get(j);
+            }
+        }
+        System.out.println(sum);
+    }
+
+    public static void addFromMinToMax (int min, int max) {
         List<Integer> arrayList = new ArrayList<>();
         for (int i = min; i <= max; i++){
             arrayList.add(i);
         }
         System.out.println(arrayList);
     }
+
 }
